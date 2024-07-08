@@ -18,54 +18,76 @@
           <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
         </div>
         <nav>
-            <a href="#details">Details</a>
-            <a href="#about-me">About Me</a>
-            <a href="#contact">Contact</a>
+            <a class="fr" href="#details">Détails</a>
+            <a class="en" href="#details">Details</a>
+            <a class="fr" href="#about-me">À propos</a>
+            <a class="en" href="#about-me">About Me</a>
+            <a class="fr" href="#contact">Contact</a>
+            <a class="en" href="#contact">Contact</a>
         </nav>
       </header>
 
       <main>
 
         <div id="hero">
-          <h1 id="hero-title"> Vermoot </h1>
+          <h1 id="hero-title">Vermoot</h1>
           <div id="hero-bottom">
-            <p id="hero-text">
+            <p id="hero-text" class="fr">
               Je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien
               Je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien
               Je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien, je suis un compositeur, je suis un musicien
+            </p>
+            <p id="hero-text" class="en">
+              I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer
+              I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer
+              I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer, I'm a musician, I'm a composer
             </p>
           </div>
         </div>
 
         <div id="details">
           <div class="card2 detail-card">
-            <h3>👾 Jeux vidéos</h3>
-            <p>Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
-            <a href="#">En voir plus</a>
+            <h3 class="fr">👾 Jeux vidéos</h3>
+            <h3 class="en">👾 Video games</h3>
+            <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
+            <p class="en">Stuff and things, even more stuff and even more things that are cool.</p>
+            <a class="fr" href="#">En voir plus</a>
+            <a class="en" href="#">See more</a>
           </div>
           <div class="card2 detail-card">
-            <h3>🎥 Vidéo</h3>
-            <p>Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
-            <a href="#">En voir plus</a>
+            <h3 class="fr">🎥 Vidéo</h3>
+            <h3 class="en">🎥 Video</h3>
+            <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
+            <p class="en">Stuff and things, even more stuff and even more things that are cool.</p>
+            <a class="fr" href="#">En voir plus</a>
+            <a class="en" href="#">See more</a>
           </div>
           <div class="card2 detail-card">
-            <h3>🎭 Spectacle</h3>
-            <p>Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
-            <a href="#">En voir plus</a>
+            <h3 class="fr">🎭 Spectacle</h3>
+            <h3 class="en">🎭 Live Performances</h3>
+            <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
+            <p class="en">Stuff and things, even more stuff and even more things that are cool.</p>
+            <a class="fr" href="#">En voir plus</a>
+            <a class="en" href="#">See more</a>
           </div>
         </div>
 
         <div id="about-me">
-          <div id="about-me-picture" class="col" style="flex: 0.5;"> Ici prochainement une photo de ma tronche</div>
+          <div class="fr" id="about-me-picture">Ici prochainement une photo de ma tronche</div>
+          <div class="en" id="about-me-picture">Here soon a picture of my mug</div>
           <div id="about-me-text" class="col card2">
-            <h2>Qui suis-je ?</h2>
-            <p>Visiblement quelqu'un qui n'a pas beaucoup d'inspiration pour un meilleur titre de section que "Qui suis-je ?".</p>
+            <h2 class="fr">Qui suis-je ?</h2>
+            <h2 class="en">Who am I?</h2>
+            <p class="fr">Visiblement quelqu'un qui n'a pas beaucoup d'inspiration pour un meilleur titre de section que "Qui suis-je ?".</p>
+            <p class="en">Obviously someone who doesn't have much inspiration for a better title than "Who am I ?".</p>
           </div>
         </div>
 
         <div id="contact" class="card2 pad-it">
-          <h2>Contactez-moi !</h2>
-          <p>Avec un formulaire mais aussi des réseaux sociaux et tout</p>
+          <h2 class="fr">Contactez-moi !</h2>
+          <h2 class="en">Contact me!</h2>
+          <p class="fr">Avec un formulaire mais aussi des réseaux sociaux et tout</p>
+          <p class="en">With a form but also with social networks and everything</p>
         </div>
 
       </main>
@@ -75,5 +97,7 @@
       </footer>
 
     </section>
+
+    <script src="scripts/language-detection.js"></script>
   </body>
 </html>

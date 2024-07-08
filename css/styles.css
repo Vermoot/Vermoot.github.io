@@ -117,6 +117,9 @@ footer {
   transition: box-shadow 0.1s linear;
 }
 
+.card2 h2, .card2 h3 {
+    color: #999;
+}
 
 .pad-it {
   min-height: 600px;
@@ -138,13 +141,12 @@ h2 {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
   gap: 1em;
-  /* background-color: #FEF19F; */
   background: center no-repeat url("/images/hero-picture.png");
   min-height: 600px;
   overflow: hidden;
   color: #333;
+  margin-bottom: -3em;
 }
 
 #hero-title {
@@ -192,16 +194,16 @@ h2 {
 #details {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   gap: 2%;
-  /* padding: 0 5%; */
+  flex-wrap: wrap;
 }
 
 .detail-card {
   flex: 1;
   min-height: 400px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -209,7 +211,6 @@ h2 {
 .detail-card h3 {
   text-align: left;
   margin-left: 20px;
-  color: #bbb;
   margin: 0;
 }
 
