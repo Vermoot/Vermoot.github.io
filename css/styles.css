@@ -10,12 +10,7 @@ root {
   --color-accent7: #f2f2f2;
 }
 html {
-  /* background-image: linear-gradient(to bottom, #ffef63, #ffbb33); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
-  /* background-attachment: scroll; */
-  background-color: #f2f2f2;
+  background-color: #ffc8a2ff;
   scroll-behavior: smooth;
 }
 
@@ -33,21 +28,15 @@ body {
 
 /* 3 fixed widths */
 @media screen and (max-width: 1600px) {
-  body {
-    max-width: 1000px;
-  }
+  body { max-width: 1000px; }
 }
 
 @media screen and (max-width: 1300px) {
-  body {
-    max-width: 800px;
-  }
+  body { max-width: 800px; }
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    max-width: 90%;
-  }
+  body { max-width: 90%; }
 }
 
 main {
@@ -62,11 +51,11 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
-  align-items: flex-end;
+  align-items: center;
+  /* align-items: flex-end; */
   margin-top: 1em;
-  padding: 0 1em;
-  background-color: transparent;
+  padding: 1em 2em !important;
+  /* background-color: transparent; */
   color: #333;
   /* border-radius: 8px; */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
@@ -95,6 +84,7 @@ header a {
 
 header .logo {
   font-size: 2em;
+  /* margin-left: 1em; */
 }
 
 footer {
@@ -120,16 +110,13 @@ footer {
 .card2 {
   /* margin-top: 0.5em; */
   background-color: #f2f2f2;
-  /* border-radius: 8px; */
+  border-radius: 24px;
   box-shadow: 5px 5px #333;
   padding: 2em;
   border: 2px solid #333;
   transition: box-shadow 0.1s linear;
 }
 
-/* .card2:hover { */
-/*   box-shadow: 7px 7px 0px #333; */
-/* } */
 
 .pad-it {
   min-height: 600px;
@@ -153,8 +140,9 @@ h2 {
   justify-content: center;
   align-items: stretch;
   gap: 1em;
-  background-color: #FEF19F;
-  /* min-height: 600px; */
+  /* background-color: #FEF19F; */
+  background: center no-repeat url("/images/hero-picture.png");
+  min-height: 600px;
   overflow: hidden;
   color: #333;
 }
@@ -168,14 +156,19 @@ h2 {
   margin: 0;
   margin-left: 20px;
   font-size: 120px;
-  text-align: left;
+  text-align: center;
   z-index: 4;
 }
 
 #hero-bottom {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
+  z-index: 3;
+  margin-left: 20px;
 }
 
 #hero-text {
@@ -202,7 +195,7 @@ h2 {
   /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 2%;
   /* padding: 0 5%; */
 }
 
@@ -232,7 +225,7 @@ h2 {
   background: #666;
   box-shadow: 3px 3px 0px #333;
   padding: 1em;
-  /* border-radius: 8px; */
+  border-radius: 8px;
   margin-top: auto;
   transition: 0.2s;
 }
