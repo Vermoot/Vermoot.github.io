@@ -15,17 +15,21 @@
 
       <header class="card2">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+          <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
         </div>
         <nav>
-            <a class="fr" href="#details">Détails</a>
-            <a class="en" href="#details">Details</a>
-            <a class="fr" href="#about-me">À propos</a>
-            <a class="en" href="#about-me">About Me</a>
-            <a class="fr" href="#contact">Contact</a>
-            <a class="en" href="#contact">Contact</a>
-            <button class="en" id="btn-fr">FR</button>
-            <button class="fr" id="btn-en">EN</button>
+          <div class="fr nav">
+            <a href="#details">Détails</a>
+            <a href="#about-me">À propos</a>
+            <a href="#contact">Contact</a>
+            <button id="btn-en">EN</button>
+          </div>
+          <div class="en nav">
+            <a href="#details">Details</a>
+            <a href="#about-me">About me</a>
+            <a href="#contact">Contact</a>
+            <button id="btn-fr">FR</button>
+          </div>
         </nav>
       </header>
 
@@ -53,6 +57,9 @@
             <h3 class="en">👾 Video games</h3>
             <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
             <p class="en">Stuff and things, even more stuff and even more things that are cool.</p>
+            <audio id="first-audio" style="background: url('https://avatars.githubusercontent.com/u/61667511?s=200&v=4';)" src="assets/audio/Battle Loop.ogg"></audio>
+            <audio id="second-audio" src="assets/audio/Charging station Loop.ogg"></audio>
+            <audio id="third-audio" src="assets/audio/Battle Loop.ogg"></audio>
             <a class="fr" href="#">En voir plus</a>
             <a class="en" href="#">See more</a>
           </div>
@@ -101,5 +108,6 @@
     </section>
 
     <script src="scripts/language-detection.js"></script>
+    <script src="scripts/audioplayer.js"></script>
   </body>
 </html>

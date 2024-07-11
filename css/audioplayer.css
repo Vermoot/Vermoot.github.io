@@ -1,0 +1,54 @@
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  background: #f2f2f2;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 0px #333;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.play-pause-btn {
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+  /* padding: 5px 10px; */
+  margin-right: 10px;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  font-size: 24px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #333;
+}
+
+.seek-bar {
+  flex-grow: 1;
+  height: 5px;
+  background: #ccc;
+  position: relative;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid #333;
+}
+
+.seek-bar input {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.seek-bar .progress {
+  height: 100%;
+  border-radius: 5px;
+  background: #333;
+  width: 0;
+}
