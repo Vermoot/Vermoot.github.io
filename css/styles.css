@@ -259,16 +259,37 @@ h2 {
 }
 
 /*Floating Back-To-Top Button*/
-#myBtn {
+#scrollToTop {
+  font-weight: 800;
+  font-size: 1.5em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  bottom: 20px;
+  color: #ccc;
+  bottom: 5%;
   float: right;
+  /* right 50px + 5% of width */
   right: 5%;
-  left: 95%;
+  /* left: auto; */
+  z-index: 1;
   background-color: rgb(100,100,100);
   min-height: 50px;
   min-width: 50px;
+  border: 2px solid #333;
+  box-shadow: 2px 3px 0px #333;
   border-radius: 50%;
+  transition: all 0.1s;
+}
+
+#scrollToTop:hover {
+  cursor: pointer;
+  box-shadow: 4px 5px 0px #333;
+}
+
+#scrollToTop:active {
+  box-shadow: 2px 3px 0px #333;
+  transform: translate(2px, 2px);
 }
 
 /*On Hover Color Change*/
