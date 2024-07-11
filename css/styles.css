@@ -53,7 +53,7 @@ header {
   align-items: center;
   /* align-items: flex-end; */
   margin-top: 1em;
-  padding: 1em 2em !important;
+  padding: 1em 1.5em !important;
   /* background-color: transparent; */
   color: #333;
   /* border-radius: 8px; */
@@ -61,10 +61,17 @@ header {
   text-align: center;
 }
 
+header .logo {
+  font-size: 2em;
+  /* margin-left: 1em; */
+}
+
 .nav {
   display: flex;
   flex-direction: row;
-  gap: 2em;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
 }
 
 header a {
@@ -76,15 +83,28 @@ header a {
   border-radius: 8px;
 }
 
+#btn-fr {
+  background: center no-repeat url("/assets/images/fr-flag.png") ;
+}
+
+#btn-en {
+  background: center no-repeat url("/assets/images/uk-flag.png") ;
+}
+
+#btn-fr, #btn-en {
+  background-size: 2em;
+  height: 2em;
+  width: 2em;
+  border: none;
+  cursor: pointer;
+  /* margin-left: -1em; */
+}
+
 /* header a:hover { */
 /*   background: #444; */
 /*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 /* } */
 
-header .logo {
-  font-size: 2em;
-  /* margin-left: 1em; */
-}
 
 footer {
   margin-top: auto;
@@ -279,7 +299,7 @@ h2 {
   border: 2px solid #333;
   box-shadow: 2px 3px 0px #333;
   border-radius: 50%;
-  transition: all 0.1s;
+  transition: box-shadow 0.1s, right ease-in-out 0.3s;
 }
 
 #scrollToTop:hover {
@@ -315,7 +335,5 @@ h2 {
 
 #second-audio .play-pause-btn {
   color: #333;
-
-
   text-shadow: 0px 0px 5px #fff !important;
 }
