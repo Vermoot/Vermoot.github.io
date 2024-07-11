@@ -6,9 +6,10 @@ window.onscroll = function() {showScrollToTopBtn()};
 
 function showScrollToTopBtn() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.style.display = "block";
+    // scrollToTopBtn.style.display = "block";
+    scrollToTopBtn.style.right = "5%";
   } else {
-    scrollToTopBtn.style.display = "none";
+    scrollToTopBtn.style.right = "calc(-50px - 5%)";
   }
 }
 function scrollToTop() {
