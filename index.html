@@ -5,36 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vermoot - Musicien Compositeur</title>
-
     <link rel="stylesheet" href="css/styles.css">
-
     <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
-
   </head>
 
   <body>
     <section class="page-layout">
       <button id="scrollToTop">↑</button>
 
-      <header class="card2">
-        <div class="logo">
-          <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
-        </div>
-        <nav>
-          <div class="fr nav">
-            <a href="#details">Détails</a>
-            <a href="#about-me">À propos</a>
-            <a href="#contact">Contact</a>
-            <button id="btn-en"></button>
-          </div>
-          <div class="en nav">
-            <a href="#details">Details</a>
-            <a href="#about-me">About me</a>
-            <a href="#contact">Contact</a>
-            <button id="btn-fr"></button>
-          </div>
-        </nav>
-      </header>
+      <div id="header"></div>
 
       <main>
 
@@ -55,7 +34,7 @@
         </div>
 
         <div id="details">
-          <div class="card2 detail-card">
+          <div class="card detail-card">
             <h3 class="fr">👾 Jeux vidéos</h3>
             <h3 class="en">👾 Video games</h3>
             <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
@@ -66,7 +45,7 @@
             <a class="fr" href="#">En voir plus</a>
             <a class="en" href="#">See more</a>
           </div>
-          <div class="card2 detail-card">
+          <div class="card detail-card">
             <h3 class="fr">🎥 Vidéo</h3>
             <h3 class="en">🎥 Video</h3>
             <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
@@ -74,7 +53,7 @@
             <a class="fr" href="#">En voir plus</a>
             <a class="en" href="#">See more</a>
           </div>
-          <div class="card2 detail-card">
+          <div class="card detail-card">
             <h3 class="fr">🎭 Spectacle</h3>
             <h3 class="en">🎭 Live Performances</h3>
             <p class="fr">Des trucs, des machins, et même encore d'autres trucs qui sont bien en vrai</p>
@@ -87,7 +66,7 @@
         <div id="about-me">
           <div class="fr" id="about-me-picture">Ici prochainement une photo de ma tronche</div>
           <div class="en" id="about-me-picture">Here soon a picture of my mug</div>
-          <div id="about-me-text" class="col card2">
+          <div id="about-me-text" class="col card">
             <h2 class="fr">Qui suis-je ?</h2>
             <h2 class="en">Who am I?</h2>
             <p class="fr">Visiblement quelqu'un qui n'a pas beaucoup d'inspiration pour un meilleur titre de section que "Qui suis-je ?".</p>
@@ -95,7 +74,7 @@
           </div>
         </div>
 
-        <div id="contact" class="card2 pad-it">
+        <div id="contact" class="card pad-it">
           <h2 class="fr">Contactez-moi !</h2>
           <h2 class="en">Contact me!</h2>
           <p class="fr">Avec un formulaire mais aussi des réseaux sociaux et tout</p>
@@ -104,12 +83,12 @@
 
       </main>
 
-      <footer class="card2">
-        <p>&copy; 2024 Vermoot</p>
-      </footer>
+      <div id="footer"></div>
 
     </section>
 
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/language-detection.js"></script>
     <script src="js/audioplayer.js"></script>
     <script src="js/scrolltotop.js"></script>

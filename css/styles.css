@@ -133,22 +133,14 @@ footer {
 .card {
   /* margin-top: 0.5em; */
   background-color: #f2f2f2;
-  border-radius: 8px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-  padding: 1em;
-}
-
-.card2 {
-  /* margin-top: 0.5em; */
-  background-color: #f2f2f2;
-  border-radius: 24px;
+  border-radius: 4px;
   box-shadow: 5px 5px #333;
   padding: 2em;
   border: 2px solid #333;
   transition: box-shadow 0.1s linear;
 }
 
-.card2 h2, .card2 h3 {
+.card h2, .card h3 {
     color: #999;
 }
 
@@ -173,11 +165,11 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  background: center no-repeat url("/assets/images/hero-picture.png");
+  background: bottom no-repeat url("/assets/images/hero-picture.png");
   min-height: 600px;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: #333;
-  margin-bottom: -3em;
+  margin-bottom: -2dvw;
 }
 
 #hero-title {
