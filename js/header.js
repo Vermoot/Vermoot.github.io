@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Define the header content
-  const headerContent = `
+  const headerContent = html `
       <header class="card">
         <div class="logo">
           <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
