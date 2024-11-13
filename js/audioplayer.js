@@ -40,12 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Play/pause functionality
     playPauseBtn.addEventListener('click', () => {
       if (audio.paused) {
+        audioElements.forEach((a) => a.pause());
         audio.play();
-        playPauseBtn.innerHTML = '&#10074;&#10074;'; // Pause symbol (⏸)
       } else {
         audio.pause();
-        playPauseBtn.innerHTML = '&#9654;'; // Play symbol (▶)
       }
+    });
+
+    // Update button state when the audio starts playing
+    audio.addEventListener('play', () => {
+      playPauseBtn.innerHTML = '&#10074;&#10074;'; // Pause symbol (⏸)
+    });
+
+    // Update button state when the audio is paused
+    audio.addEventListener('pause', () => {
+      playPauseBtn.innerHTML = '&#9654;'; // Play symbol (▶)
     });
 
     // Update progress bar as the audio plays
