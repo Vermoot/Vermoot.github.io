@@ -199,7 +199,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  background: bottom no-repeat url("/assets/images/hero-picture.png");
+  /* background: bottom no-repeat url("/assets/images/hero-picture.png"); */
   min-height: 600px;
   /* overflow: hidden; */
   margin-bottom: -2dvw;
