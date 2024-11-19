@@ -1,5 +1,6 @@
 .custom-audio-player {
   display: flex;
+  gap: 4px;
   align-items: center;
   margin: 10px 0;
   background: #f2f2f2;
@@ -8,16 +9,23 @@
   background-clip: padding-box;
   padding: 4px 10px;
   border-radius: 10px;
-  
+  overflow: hidden;
+  min-height: 40px;
 }
 
-.play-pause-btn {
+.custom-audio-player img {
+  width: 60%;
+  /* vertical-align: middle; */
+}
+
+.play-pause-btn, .reroll-btn {
+  display: flex;
   cursor: pointer;
   width: 30px;
   text-align: center;
   line-height: 30px;
   /* padding: 5px 10px; */
-  margin-right: 10px;
+  /* margin-right: 10px; */
   background-color: transparent;
   color: #333;
   border: none;
@@ -26,10 +34,24 @@
   font-weight: bold;
   -webkit-text-stroke: 1px #333;
   transition: transform 0.08s;
+  font-variant-emoji: text;
+  user-drag: none;
+  -webkit-user-drag: none;
+  justify-content: center;
 }
 
-.play-pause-btn:hover {
+button img {
+  /* align center */
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.play-pause-btn:hover, .reroll-btn:hover {
   transform: scale(1.1);
+}
+
+.play-pause-btn:active, .reroll-btn:active {
+  transform: scale(0.9);
 }
 
 .seek-bar {
@@ -63,4 +85,62 @@
   border-radius: 5px;
   background: #333;
   width: 0;
+}
+
+.progress {
+  transition: width 0.1s ease-in-out;
+}
+
+@keyframes float {
+  0%   { box-shadow: 5px 5px 0px #333; }
+  50%  { box-shadow: 9px 9px 0px #333; }
+  100% { box-shadow: 5px 5px 0px #333; }
+}
+
+.floating {
+  animation-name: float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes shake {
+  0%   { transform: translate(1px, 1px) rotate(0deg); }
+  10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+  20%  { transform: translate(-3px, 0px) rotate(1deg); }
+  30%  { transform: translate(3px, 2px) rotate(0deg); }
+  40%  { transform: translate(1px, -1px) rotate(1deg); }
+  50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+  60%  { transform: translate(-3px, 1px) rotate(0deg); }
+  70%  { transform: translate(3px, 1px) rotate(-1deg); }
+  80%  { transform: translate(-1px, -1px) rotate(1deg); }
+  90%  { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaking {
+  animation-name: shake;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes falling {
+  0% {transform: translate(0px, 0px) rotate(0deg);}
+  65% {transform: translate(0px, 40px) rotate(10deg); .progress { transition: width 0s ease-in-out; }}
+  66% {transform: translate(0px, -40px) rotate(0deg);}
+  100% {transform: translate(0px, 0px) rotate(0deg); .progress { transition: width 0.1s ease-in-out; }}
+}
+
+.falling {
+  animation-name: falling;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  .progress {
+    transition: width 0s ease-in-out;
+  }
 }

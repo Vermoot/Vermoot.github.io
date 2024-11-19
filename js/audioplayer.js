@@ -6,16 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create custom player elements
     const playerContainer = document.createElement('div');
+    playerContainer.player = audio;
     playerContainer.className = 'custom-audio-player';
     if (audio.id) { playerContainer.id = audio.id; }
     if (audio.className) { playerContainer.className += ' ' + audio.className; }
 
     const playPauseBtn = document.createElement('button');
     playPauseBtn.className = 'play-pause-btn';
-    playPauseBtn.innerHTML = '&#9654;'; // Play symbol (▶)
+    playPauseBtn.innerHTML = "<img src='assets/svg/play.svg' alt='Play' />";
 
     const seekBar = document.createElement('div');
     seekBar.className = 'seek-bar';
+    seekBar.id = 'seek-bar';
 
     const progressBar = document.createElement('div');
     progressBar.className = 'progress';
@@ -49,12 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update button state when the audio starts playing
     audio.addEventListener('play', () => {
-      playPauseBtn.innerHTML = '&#10074;&#10074;'; // Pause symbol (⏸)
+      // playPauseBtn.innerHTML = '⏸'; // Pause symbol (⏸)
+      playPauseBtn.innerHTML = "<img src='assets/svg/pause.svg' alt='Pause' />";
     });
 
     // Update button state when the audio is paused
     audio.addEventListener('pause', () => {
-      playPauseBtn.innerHTML = '&#9654;'; // Play symbol (▶)
+      // playPauseBtn.innerHTML = '&#9654;'; // Play symbol (▶)
+      playPauseBtn.innerHTML = "<img src='assets/svg/play.svg' alt='Play' />";
     });
 
     // Update progress bar as the audio plays
@@ -66,10 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Seek functionality
     seekInput.addEventListener('input', (e) => {
       audio.currentTime = e.target.value;
-    });
-
-    // Sync seek bar width with the input range
-    seekInput.addEventListener('input', () => {
       progressBar.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
     });
   });

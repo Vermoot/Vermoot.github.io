@@ -4,6 +4,25 @@
 
 html{ width:100%; box-sizing: border-box; font-size:100%; overflow-x:hidden; scroll-behavior: smooth; }
 
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 img{ border:none; }
 
 *, *:after, *:before{ box-sizing: border-box; } 
@@ -23,10 +42,10 @@ root {
   --color-accent6: #f2f2f2;
   --color-accent7: #f2f2f2;
 }
-html {
-  background-color: #ffc8a2ff;
-  scroll-behavior: smooth;
-}
+/* html { */
+/*   background-color: #ff854a; */
+/*   scroll-behavior: smooth; */
+/* } */
 
 body {
   display: flex;
@@ -134,10 +153,24 @@ footer {
   /* margin-top: 0.5em; */
   background-color: #f2f2f2;
   border-radius: 4px;
-  box-shadow: 5px 5px #333;
+  /* box-shadow: 3px 3px red, 5px 5px #333; */
   padding: 2em;
   border: 2px solid #333;
   transition: box-shadow 0.1s linear;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #fba176;
+  border: 2px solid #333;
+  border-radius: 4px;
 }
 
 .card h2, .card h3 {
@@ -160,6 +193,7 @@ h2 {
 
 #hero {
   /* in columns that turn into rows on mobile */
+  color: #ddd;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -168,14 +202,13 @@ h2 {
   background: bottom no-repeat url("/assets/images/hero-picture.png");
   min-height: 600px;
   /* overflow: hidden; */
-  color: #333;
   margin-bottom: -2dvw;
 }
 
 #hero-title {
   font-family: Impact, sans-serif;
   font-weight: 400;
-  color: #FA804A;
+  color: #ff854a;
   text-transform: uppercase;
   line-height: 120px;
   margin: 0;
@@ -183,6 +216,7 @@ h2 {
   font-size: 120px;
   text-align: center;
   z-index: 4;
+  text-shadow: 5px 5px #333;
 }
 
 #hero-bottom {
@@ -213,6 +247,15 @@ h2 {
   z-index: 3;
   margin-left: auto;
 }
+
+#random-music {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
 
 #details {
   display: flex;
@@ -327,6 +370,8 @@ h2 {
 
 #first-audio .play-pause-btn {
   color: white;
+  /* svg fill white */
+  fill: currentColor
   /* text-shadow: 0px 0px 10px #000; */
 }
 
@@ -338,4 +383,8 @@ h2 {
 #second-audio .play-pause-btn {
   color: #333;
   text-shadow: 0px 0px 5px #fff !important;
+}
+
+.spin {
+  animation: spin1 0.8s ease-in-out 1;
 }
