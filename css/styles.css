@@ -73,7 +73,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2dvw;
-  margin-bottom: 2dvw;
+  /* margin-bottom: 2dvw; */
   /* padding: 1em 0; */
 }
 
@@ -84,6 +84,7 @@ header {
   align-items: center;
   /* align-items: flex-end; */
   margin-top: 1em;
+  margin-bottom: 1em;
   padding: 1em 1.5em !important;
   /* background-color: transparent; */
   color: #333;
@@ -138,7 +139,7 @@ header a {
 
 
 footer {
-  margin-top: auto;
+  margin-top: 1em;
   /* padding: 1em; */
   /* border-radius: 8px; */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
