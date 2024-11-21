@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const randomPlayer = document.getElementById("random-player");
   // randomplayer width 300px
   randomPlayer.style.width = "300px";
-  const randomPlayerTitle = document.getElementById("random-player-title");
+  // const randomPlayerTitle = document.getElementById("random-player-title");
 
   randomPlayer.classList.add("floating");
   // list of eligible files to get
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     randomPlayer.player.currentTime = Math.random() * (randomPlayer.player.duration * 0.6 - randomPlayer.player.duration * 0.2) + randomPlayer.player.duration * 0.2;
     randomPlayer.player.play();
 
-    randomPlayerTitle.textContent = randomPlayer.player.src.split("/").pop().split(".")[0];
+    // randomPlayerTitle.textContent = randomPlayer.player.src.split("/").pop().split(".")[0];
   });
 
 
